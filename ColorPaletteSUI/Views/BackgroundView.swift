@@ -10,6 +10,13 @@ import SwiftUI
 struct BackgroundView: View {    
     var body: some View {
         LinearGradient(gradient: Gradient(colors: [Color("StartColor"), Color("EndColor")]), startPoint: .top, endPoint: .bottom)
+            .onTapGesture {
+                endEditing()
+            }
+    }
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
     }
 }
 

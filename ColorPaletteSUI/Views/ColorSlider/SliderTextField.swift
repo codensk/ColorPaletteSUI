@@ -12,18 +12,22 @@ struct SliderTextField: View {
     @State private var showAlert = false
 
     var body: some View {
-        TextField("Red", text: Binding(get: {
+        TextField("", text: Binding(get: {
             "\(lround(self.value))"
         }, set: { newValue in
+            guard !newValue.isEmpty else { return }
+            
             if Validator.shared.validateColorValue(value: newValue) {
                 self.value = Double(newValue)!
             } else {
                 self.value = 0
                 self.showAlert = true
             }
-        }))
+        }), onCommit:  {
+            UIApplication.shared.endEditing()
+        })
         .colorTextField()
-        .alert(isPresented: $showAlert, title: "Ошибка", message: "Разрешено вводить только числа", buttonText: "OK")
+        .alert(isPresented: $showAlert, title: "Ошибка", message: "Разрешено вводить только числа от 0 до 255", buttonText: "OK")
     }
 }
 
