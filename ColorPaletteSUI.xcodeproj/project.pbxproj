@@ -95,12 +95,10 @@
 		A27158C326B3977D00DDF92F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A27158E126B43C3300DDF92F /* ColorSlider */,
+				A27158D126B3A19700DDF92F /* ColorSlider.swift */,
 				A27158C426B3978F00DDF92F /* BackgroundView.swift */,
 				A27158C626B397EB00DDF92F /* ColorPreviewView.swift */,
-				A27158C926B39D5900DDF92F /* ColorTextValue.swift */,
-				A27158CB26B39D6D00DDF92F /* ValueSlider.swift */,
-				A27158CD26B39D7C00DDF92F /* SliderTextField.swift */,
-				A27158D126B3A19700DDF92F /* ColorSlider.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +138,16 @@
 				A27158BD26B3965200DDF92F /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A27158E126B43C3300DDF92F /* ColorSlider */ = {
+			isa = PBXGroup;
+			children = (
+				A27158C926B39D5900DDF92F /* ColorTextValue.swift */,
+				A27158CB26B39D6D00DDF92F /* ValueSlider.swift */,
+				A27158CD26B39D7C00DDF92F /* SliderTextField.swift */,
+			);
+			path = ColorSlider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
