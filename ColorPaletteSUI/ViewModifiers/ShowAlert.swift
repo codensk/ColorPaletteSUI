@@ -33,7 +33,7 @@ extension View {
                     title: title,
                     message: message,
                     buttonText: buttonText
-        )
+            )
         )
     }
 }
